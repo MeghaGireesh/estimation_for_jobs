@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="menu_estimation_for_jobs" name="Job Estimates" action="action_estimation_jobs" parent="sale.sale_order_menu"/>
+        <menuitem id="menu_job_types" name="Job Types" action="action_job_types" parent="sale.menu_sale_config"/>
+    </data>
+</odoo>

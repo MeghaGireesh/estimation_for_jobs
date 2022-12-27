@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_estimation_jobs,access_estimation_jobs,estimation_for_jobs.model_estimation_jobs,base.group_user,1,1,1,1
+access_job_type,access_job_type,estimation_for_jobs.model_job_type,base.group_user,1,1,1,1
+access_material_estimation,access_material_estimation,estimation_for_jobs.model_material_estimation,base.group_user,1,1,1,1
+access_labour_estimation,access_material_estimation,estimation_for_jobs.model_labour_estimation,base.group_user,1,1,1,1
+access_overhead_estimation,access_material_estimation,estimation_for_jobs.model_overhead_estimation,base.group_user,1,1,1,1
+
+

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="action_estimation_jobs" model="ir.actions.act_window">
+            <field name="name">Job Estimation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">estimation.jobs</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record id="action_job_estimation_form" model="ir.ui.view">
+            <field name="name">action.estimation.jobs.form</field>
+            <field name="model">estimation.jobs</field>
+            <field name="arch" type="xml">
+                <form string="job">
+                    <sheet>
+                        <group id="main_group">
+                            <group>
+                                <field name="customer_id"/>
+                                <field name="price_list_id"/>
+                                <field name="payment_terms_id"/>
+                                <field name="date"/>
+                                <field name="company_id"/>
+                                <field name="project_id"/>
+                                <field name="analytic_account"/>
+                                <field name="job_types" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Material Estimation">
+                                <field name="material_estimation_ids">
+                                    <tree editable="bottom">
+                                        <field name="type"/>
+                                        <field name="product_id"/>
+                                        <field name="description"/>
+                                        <field name="quantity"/>
+                                        <field name="uom"/>
+                                        <field name="unit_price"/>
+                                        <field name="discount"/>
+                                        <field name="subtotal"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="Labour Estimation">
+                                <field name="labour_estimation_ids">
+                                    <tree editable="bottom">
+                                        <field name="type"/>
+                                        <field name="product_id"/>
+                                        <field name="description"/>
+                                        <field name="quantity"/>
+                                        <field name="uom"/>
+                                        <field name="unit_price"/>
+                                        <field name="discount"/>
+                                        <field name="subtotal"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="Overhead Estimation">
+                                <field name="overhead_estimation_ids">
+                                    <tree editable="bottom">
+                                        <field name="type"/>
+                                        <field name="product_id"/>
+                                        <field name="description"/>
+                                        <field name="quantity"/>
+                                        <field name="uom"/>
+                                        <field name="unit_price"/>
+                                        <field name="discount"/>
+                                        <field name="subtotal"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="Other Info">
+
+                            </page>
+                            <page string="Additional Notes">
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_job_estimation_tree" model="ir.ui.view">
+            <field name="name">action.job.estimation.tree</field>
+            <field name="model">estimation.jobs</field>
+            <field name="arch" type="xml">
+                <tree string="estimation">
+                    <field name="customer_id"/>
+                    <field name="price_list_id"/>
+                    <field name="payment_terms_id"/>
+                    <field name="date"/>
+                    <field name="company_id"/>
+                    <field name="project_id"/>
+                    <field name="analytic_account"/>
+                    <field name="job_types"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
